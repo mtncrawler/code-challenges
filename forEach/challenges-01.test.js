@@ -50,6 +50,11 @@ const addBonusPoints = (arr) => {
 
 const addCurve = (arr) => {
   // Solution code here...
+  let percentAddScore = [];
+  for(let i in arr) {
+      percentAddScore.push(arr[i] *= 1.05);
+  }
+  return percentAddScore;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -63,10 +68,13 @@ const addCurve = (arr) => {
 
 const greeting = (word) => {
   // Solution code here...
+  return word.toUpperCase();
 }
 
 const speaker = (message, callback) => {
   // Solution code here...
+  let allUpper = callback(message);
+  return allUpper;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -88,10 +96,15 @@ const speaker = (message, callback) => {
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.push(value);
 }
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+    for(let i=0; i<times; i++){
+        callback(arr, num); 
+    }
+  return arr;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -109,11 +122,18 @@ const addNumbers = (num, arr, times, callback) => {
 // ------------------------------------------------------------------------------------------------
 
 const removeOne = (num, input) => {
-  // Solution code here...
+  // Solution code here...s
+  if(num % 3 === 2){
+    input.pop();
+ }
 }
 
 const removeElements = (input, callback) => {
   // Solution code here...
+  for(let i of input) {
+    callback(i, input);
+  }
+  return input;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -124,6 +144,10 @@ const removeElements = (input, callback) => {
 
 const removeWithForEach = (input, callback) => {
   // Solution code here...
+  input.forEach((item) => {
+    callback(item, input);
+  });
+  return input;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -139,6 +163,12 @@ const removeWithForEach = (input, callback) => {
 
 const removeWithAnon = (input) => {
   // Solution code here...
+  input.forEach((ele, index, arr) => {
+    if(ele % 3 === 2){
+      arr.pop();
+    };
+  })
+  return input;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -161,6 +191,13 @@ const removeWithAnon = (input) => {
 
 const createList = (availableItems) => {
   // Solution code here...
+  let finalList = [];
+  availableItems.forEach((el) => {
+    if(el.available) {
+      finalList.push(el.name);
+    }
+  })
+  return finalList;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -179,6 +216,22 @@ const createList = (availableItems) => {
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  let outputArr = [];
+  arr.forEach((num) => {
+    if(num % 5 === 0 && num % 3 === 0) {
+      outputArr.push('Fizz Buzz');
+    }
+    else if(num % 5 === 0) {
+      outputArr.push('Buzz');
+    }
+    else if(num % 3 === 0) {
+      outputArr.push('Fizz');
+    }
+    else {
+      outputArr.push(num);
+    }
+  })
+  return outputArr;
 }
 
 // ------------------------------------------------------------------------------------------------
