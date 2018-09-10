@@ -16,6 +16,13 @@
 
 const isNum = (num) => {
   // Solution code here...
+  let regex = /[0-9]/g
+  if(regex.test(num)) {
+      return true;
+  }
+  else {
+      return false;
+  }
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -29,6 +36,8 @@ const isNum = (num) => {
 
 const isCapitalized = (string) => {
   // Solution code here...
+  let regex = /\b[A-Z]\w*/g;
+  return string.match(regex);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -38,8 +47,14 @@ const isCapitalized = (string) => {
 // pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 // ------------------------------------------------------------------------------------------------
 
+let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
+
 const citiesAtoJ = (cities) => {
   // Solution code here...
+  let regex = /\b[A-J]\w*/g;
+  let cityString = String(cities);
+  return cityString.match(regex);
+  
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -56,6 +71,14 @@ const citiesAtoJ = (cities) => {
 
 const matchMonth = (input) => {
   // Solution code here...
+  let regex = /^[O o]ct?o?b?e?r/g;
+  if(regex.test(input)) {
+      return true;
+  }
+  else {
+      return false;
+  }
+
 };
 
 // ------------------------------------------------------------------------------------------------
