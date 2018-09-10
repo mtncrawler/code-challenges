@@ -51,10 +51,15 @@ let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New Y
 
 const citiesAtoJ = (cities) => {
   // Solution code here...
-  let regex = /\b[A-J]\w*/g;
-  let cityString = String(cities);
-  return cityString.match(regex);
+  let answer = [];
   
+  cities.forEach(city => {
+    if(/^[A-J]/g.test(city)) {
+      answer.push(city);
+    }
+  })
+  return answer;
+
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -96,6 +101,7 @@ const matchMonth = (input) => {
 
 const noPunctuation = input => {
   // Solution code here...
+
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -129,6 +135,7 @@ const seashells = 'She sells seashells by the seashore. The shells she sells are
 
 const findShells = (phrase) => {
   // Solution code here...
+  return phrase.match(/\w+ells\b/g);
 };
 
 // ------------------------------------------------------------------------------------------------
