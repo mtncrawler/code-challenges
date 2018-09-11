@@ -52,8 +52,16 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getFrom = (obj, property) => {
   // Solution code here...
-
-}
+  if(property === 'keys') {
+      return Object.keys(obj);
+  }
+  else if(property === 'values') {
+      return Object.values(obj);
+  }
+  else if (property === 'entries') {
+      return Object.entries(obj);
+  }
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
@@ -111,6 +119,7 @@ let characters = [
 
 const totalCharacters = (arr) => {
   // Solution code here...
+  return arr.length;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -122,6 +131,11 @@ const totalCharacters = (arr) => {
 
 const getHouses = (arr) => {
   // Solution code here...
+  const answer = [];
+  Object.values(arr).forEach( (ele) => {
+    answer.push(ele.house);
+  })
+  return answer;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -133,6 +147,14 @@ const getHouses = (arr) => {
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+  Object.values(arr).forEach( (ele) => {
+    if(ele.character.children) {
+        return true;
+    }
+    else {
+        return false;
+    }
+  })
 }
 
 // ------------------------------------------------------------------------------------------------
