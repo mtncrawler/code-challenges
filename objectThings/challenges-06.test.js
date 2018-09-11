@@ -9,6 +9,7 @@
 
 const getKeys = (obj) => {
   // Solution code here...
+  return Object.keys(obj);
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -20,6 +21,7 @@ const getKeys = (obj) => {
 
 const getValues = (obj) => {
   // Solution code here...
+  return Object.values(obj);
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -31,6 +33,7 @@ const getValues = (obj) => {
 
 const getEntries = (obj) => {
   // Solution code here...
+  return Object.entries(obj);
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -49,6 +52,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getFrom = (obj, property) => {
   // Solution code here...
+
 }
 
 // ------------------------------------------------------------------------------------------------
