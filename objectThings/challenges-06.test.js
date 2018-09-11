@@ -147,14 +147,16 @@ const getHouses = (arr) => {
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-  Object.values(arr).forEach( (ele) => {
-    if(ele.character.children) {
-        return true;
-    }
-    else {
-        return false;
-    }
-  })
+  
+
+  // Object.values(arr).forEach( (ele) => {
+  //   if(ele.character.children) {
+  //       return true;
+  //   }
+  //   else {
+  //       return false;
+  //   }
+  // })
 }
 
 // ------------------------------------------------------------------------------------------------
