@@ -67,6 +67,11 @@ const mapTwoToThe = (input) => {
 
 const charCode = (input) => {
   // Solution code here...
+  let answer = [];
+  input.map( letter => {
+    answer.push(letter.charCodeAt());
+  })
+  return answer;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -82,6 +87,19 @@ const charCode = (input) => {
 
 const evenOdd = (input) => {
   // Solution code here...
+  let answer =[];
+  input.map( number => {
+    if(number % 2 === 0) {
+      answer.push('even');
+    }
+    else if (number % 2 === 1) {
+      answer.push('odd');
+    }
+    else { 
+      answer.push('N/A');
+    }
+  })
+  return answer;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -126,6 +144,11 @@ const snorlaxAbilities = {
 
 const extractAbilities = (abilities) => {
   // Solution code here...
+  let answer = [];
+  abilities.abilities.map( item => {
+    answer.push(item.ability);
+  })
+  return answer;
 };
 
 // ------------------------------------------------------------------------------------------------
