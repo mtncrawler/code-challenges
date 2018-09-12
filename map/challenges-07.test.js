@@ -79,7 +79,6 @@ const charCode = (input) => {
 
 const evenOdd = (input) => {
   // Solution code here...
- 
   return input.map( number => {
     if(number % 2 === 0) {
       return 'even';
@@ -91,7 +90,6 @@ const evenOdd = (input) => {
       return 'N/A';
     }
   })
-  
 };
 
 // ------------------------------------------------------------------------------------------------
