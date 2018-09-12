@@ -16,9 +16,9 @@ const forLoopTwoToThe = (input) => {
   // Solution code here...
   let answer = [];
   for(let integer of input) {
-      let product = Math.pow(2, integer);
-      return answer.push(product);
+      answer.push(Math.pow(2, integer));
   }
+  return answer;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -33,9 +33,8 @@ const forEachTwoToThe = (input) => {
   let answer = [];
   input.forEach( ele => {
     answer.push(Math.pow(2, ele));
-    return answer;
-    
   })
+  return answer;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -48,6 +47,11 @@ const forEachTwoToThe = (input) => {
 
 const mapTwoToThe = (input) => {
   // Solution code here...
+  let answer = [];
+  input.map( integer => {
+    answer.push(Math.pow(2, integer));
+  })
+  return answer;
 }
 
 // ------------------------------------------------------------------------------------------------
