@@ -47,11 +47,7 @@ const forEachTwoToThe = (input) => {
 
 const mapTwoToThe = (input) => {
   // Solution code here...
-  let answer = [];
-  input.map( integer => {
-    answer.push(Math.pow(2, integer));
-  })
-  return answer;
+  return input.map( integer => Math.pow(2, integer));
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -67,11 +63,7 @@ const mapTwoToThe = (input) => {
 
 const charCode = (input) => {
   // Solution code here...
-  let answer = [];
-  input.map( letter => {
-    answer.push(letter.charCodeAt());
-  })
-  return answer;
+  return input.map( letter => letter.charCodeAt());
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -87,19 +79,19 @@ const charCode = (input) => {
 
 const evenOdd = (input) => {
   // Solution code here...
-  let answer =[];
-  input.map( number => {
+ 
+  return input.map( number => {
     if(number % 2 === 0) {
-      answer.push('even');
+      return 'even';
     }
     else if (number % 2 === 1) {
-      answer.push('odd');
+      return 'odd';
     }
     else { 
-      answer.push('N/A');
+      return 'N/A';
     }
   })
-  return answer;
+  
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -144,11 +136,7 @@ const snorlaxAbilities = {
 
 const extractAbilities = (abilities) => {
   // Solution code here...
-  let answer = [];
-  abilities.abilities.map( item => {
-    answer.push(item.ability);
-  })
-  return answer;
+  return abilities.map( item => item.ability.name);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -196,6 +184,9 @@ const snorlaxStats = {
 
 const extractStats = (stats) => {
   // Solution code here...
+  return stats.map( stat => {
+    return { name: stat.stat.name, total: (stat.effort + stat.baseStat)};
+  })
 };
 
 // ------------------------------------------------------------------------------------------------
