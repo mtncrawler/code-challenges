@@ -11,6 +11,7 @@
 
 const oddValues = (input) => {
   // Solution code here...
+  return input.filter( digit => digit % 2 === 1);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -27,6 +28,7 @@ const oddValues = (input) => {
 
 const filterStringsWithVowels = (input) => {
   // Solution code here...
+  return input.filter( word => word.match(/[aeiou]/g));
 };
 
 
@@ -41,6 +43,9 @@ const filterStringsWithVowels = (input) => {
 
 const notInFirstArray = (forbiddenValues, input) => {
   // Solution code here...
+  return input.filter( ele => {
+      return !forbiddenValues.includes(ele);
+  })
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -87,6 +92,11 @@ const snorlaxData = {
 
 const getBaseStatGreaterThan = (input, minBaseStat) => {
   // Solution code here...
+  return input.filter( (ele) => {
+      if(ele.baseStat > minBaseStat) {
+          return ele;
+      }
+  })
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -101,6 +111,12 @@ const getBaseStatGreaterThan = (input, minBaseStat) => {
 
 const getStatName = (input, minBaseStat) => {
   // Solution code here...
+  return input.filter( ele => {
+    if(ele.baseStat > minBaseStat) {
+        return ele;
+    }
+}).map( ele => ele.stat.name);
+
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -155,6 +171,7 @@ const characters = [
 
 const getCharactersWithoutChildren = (input) => {
   // Solution code here...
+  return input.filter( ele => !ele.children);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -169,7 +186,20 @@ const getCharactersWithoutChildren = (input) => {
 
 const evenOddNumericValues = (input) => {
   // Solution code here...
+  return input.filter( ele => {
+      if((typeof ele) === 'number') {
+          return ele;
+      }
+  }).map( ele => {
+      if(ele %2 === 0) {
+          return 'even'
+      }
+      else {
+          return 'odd'
+      }
+  })
 };
+    
 
 // ------------------------------------------------------------------------------------------------
 // TESTS
