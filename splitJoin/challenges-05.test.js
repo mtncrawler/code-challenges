@@ -105,6 +105,7 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.ingredients.slice(0, ' ')
   return result;
 }
 
