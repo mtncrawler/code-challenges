@@ -17,6 +17,9 @@
 const howMuchPencil = (name) => {
   let result = [];
   // Solution code here...
+  for (let i=0; i <= name.length; i++) {
+      result.push(name.slice(i, name.length));
+  }
   return result;
 };
 
@@ -31,6 +34,13 @@ const howMuchPencil = (name) => {
 
 const wordsToCharList = (input) => {
   // Solution code here...
+  let result = [];
+  // Solution code here...
+  for (let i=0; i < input.length; i++) {
+      result.push(input.slice(i, i+1));
+  }
+  return result;
+
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -43,6 +53,10 @@ const wordsToCharList = (input) => {
 const totalSumCSV = (input) => {
   let total = 0;
   // Solution code here...
+  let digits = input.split(',');
+  for (let ndx in digits) {
+      total += parseInt(digits[ndx]);
+  }
   return total;
 };
 
