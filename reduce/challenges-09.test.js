@@ -11,7 +11,7 @@
 
 const countNumberOfElements = (input) => {
   // Solution code here...
-  return input.reduce( answer =>  answer+=1 )};
+  return input.reduce( answer =>  answer+1 )};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
@@ -66,14 +66,13 @@ const characters = [
 
 const countNumberOfChildren = (input) => {
   // Solution code here...
-  for(let i=0; i < input.length; i++) {
-      if(input[i].children) {
-        input[i].reduce( (answer, ele) => {
-                return answer += ele.children.length;
-            })
+  return input.reduce( (acc, ele) => {
+      if(ele.children) {
+          return acc + ele.children.length;
+      } else {
+          return acc + 0;
       }
-      
-  }
+  }, 0)
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -118,6 +117,11 @@ const snorlaxData = {
 
 const extractStat = (statName, input) => {
   // Solution code here...
+  return input.reduce( (accumulator, ele, ndx) => {
+    if(accumulator.stats[ndx].stat === statName) {
+        return input.stats[ndx];
+    }
+  })
 
 };
 
@@ -130,7 +134,7 @@ const extractStat = (statName, input) => {
 
 const calculateAverage = (input) => {
   // Solution code here...
-};
+  return input.reduce( (answer, ele, arr) => answer + ele)/input.length};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
@@ -144,6 +148,7 @@ const calculateAverage = (input) => {
 
 const extractChildren = input => {
   // Solution code here...
+
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -157,6 +162,9 @@ const extractChildren = input => {
 
 const reversedString = (input) => {
   // Solution code here...
+  return input.reduce( ele => {
+    
+  })
 };
 
 // ------------------------------------------------------------------------------------------------
