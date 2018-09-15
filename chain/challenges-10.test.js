@@ -14,6 +14,15 @@
 
 const count = (target, input) => {
   // Solution code here...
+  let answer = 0;
+  input.map( ele => {
+      ele.map( integer => {
+          if(integer === target){
+              answer++;
+          }
+      })
+  })
+  return answer;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -27,12 +36,17 @@ const count = (target, input) => {
 
 const totalSum = (input) => {
   // Solution code here...
+  return input.reduce( ele => {
+      ele.reduce( (acc, ele) => {
+          return acc+ele;
+      })
+  }, 0)
 };
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
 
-// Write a function named divisibleByFiveTwoToThePower that accpets an array of arrays as input.
+// Write a function named divisibleByFiveTwoToThePower that accepts an array of arrays as input.
 //
 // This function should first remove any elements that are not numbers or are not divisible by five.
 //
@@ -43,6 +57,7 @@ const totalSum = (input) => {
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+
 };
 
 // ------------------------------------------------------------------------------------------------
