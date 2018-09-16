@@ -36,11 +36,7 @@ const count = (target, input) => {
 
 const totalSum = (input) => {
   // Solution code here...
-  return input.reduce( ele => {
-      ele.reduce( (acc, ele) => {
-          return acc+ele;
-      })
-  }, 0)
+  return input.reduce( (acc, ele) => acc + ele.reduce( (acc, ele) => acc+ele, 0), 0);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -57,7 +53,13 @@ const totalSum = (input) => {
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
-
+  return input.map( ele => {
+      return ele.map( ele => {
+          if (typeof(ele) === 'number' && ele %5 === 0) {
+              return Math.pow(2, ele);
+            }
+        }).filter(ele => ele !== undefined);
+  })
 };
 
 // ------------------------------------------------------------------------------------------------
