@@ -118,9 +118,7 @@ const snorlaxData = {
 const extractStat = (statName, input) => {
   // Solution code here...
   return input.reduce( (accumulator, ele, ndx) => {
-    if(accumulator.stats[ndx].stat === statName) {
-        return input.stats[ndx];
-    }
+    return ele.stat
   })
 
 };
