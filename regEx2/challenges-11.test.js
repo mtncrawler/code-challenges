@@ -30,10 +30,13 @@ const validatePin = (pin) => {
 
 const findTagNames = elements => {
   // Solution code here...
-  let regex = /\/\w{2,4}/;
-  regex.match(elements);
-
-}
+  let regex = /\/\w{2, 4}/g;
+  let answer = [];
+  elements.forEach( ele => {
+    answer.push(ele.match(regex));
+  })
+  return answer;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
