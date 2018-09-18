@@ -10,11 +10,13 @@
 
 const validatePin = (pin) => {
   // Solution code here...
-  if(/^[0-9]{4}$/.test(pin)) {
-      return true;
-  } else {
-      return false;
-  }
+  return /^[0-9]{4}$/.test(pin);
+
+  // if(/^[0-9]{4}$/.test(pin)) {
+  //     return true;
+  // } else {
+  //     return false;
+  // }
 };
 
 // ------------------------------------------------------------------------------------------------
