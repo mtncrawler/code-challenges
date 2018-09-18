@@ -10,6 +10,11 @@
 
 const validatePin = (pin) => {
   // Solution code here...
+  if(/^[0-9]{4}$/.test(pin)) {
+      return true;
+  } else {
+      return false;
+  }
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -25,6 +30,9 @@ const validatePin = (pin) => {
 
 const findTagNames = elements => {
   // Solution code here...
+  let regex = /\/\w{2,4}/;
+  regex.match(elements);
+
 }
 
 // ------------------------------------------------------------------------------------------------
