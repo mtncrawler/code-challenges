@@ -9,6 +9,7 @@
 
 const sortBackwards = (nums) => {
   // Solution code here...
+  return nums.sort( (a, b) =>  b-a);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -23,6 +24,7 @@ const sortBackwards = (nums) => {
 
 const alphabetize = (strings) => {
   // Solution code here...
+  return strings.sort();
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -34,6 +36,7 @@ const alphabetize = (strings) => {
 
 const sortByLength = (strings) => {
   // Solution code here...
+  return strings.sort( (a, b) => a.length - b.length)
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -47,6 +50,15 @@ const sortByLength = (strings) => {
 
 const alphabetizeBetter = (strs) => {
   // Solution code here...
+  return strs.sort( (a, b) => {
+      if (a.toLowerCase() > b.toLowerCase()) {
+        return 1;
+      } else if (a.toLowerCase() < b.toLowerCase()) {
+        return -1;
+      } else {
+        return 0;
+      }
+  })
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -65,6 +77,7 @@ const alphabetizeBetter = (strs) => {
 
 const sortByPrice = (objs) => {
   // Solution code here...
+  return objs.sort( (a, b) => a.price-b.price);
 };
 
 // ------------------------------------------------------------------------------------------------
