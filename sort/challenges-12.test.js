@@ -91,6 +91,7 @@ const sortByPrice = (objs) => {
 
 const sortNumbersByLength = (nums) => {
   // Solution code here...
+  return nums.sort( (a, b) => a.toString().length - b.toString().length);
 };
 
 // -----------------------------------------------------------------------------------------------
@@ -115,6 +116,15 @@ const people = [
 
 const sortPeople = (people) => {
   // Solution code here...
+  return people.sort( (a, b) => {
+    if (a.lastName > b.lastName) {
+      return 1;
+    } else if (a.lastName < b.lastName) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -130,6 +140,27 @@ const sortPeople = (people) => {
 
 const sortPeopleBetter = (people) => {
   // Solution code here...
+  return people.sort( (a,b) => {
+    if(a.lastName === b.lastName) {
+      if (a.firstName > b.firstName) {
+        return 1;
+      } else if (a.firstName < b.firstName) {
+        return -1;
+      } else {
+        return 0;
+      }
+    } else if (a.lastName === b.lastName && a.firstName === b.firstName) {
+      return a.age - b.age;
+    } else {
+      if (a.lastName > b.lastName) {
+        return 1;
+      } else if (a.lastName < b.lastName) {
+        return -1;
+      } else {
+        return 0;
+      };
+    }
+  })
 };
 
 // ------------------------------------------------------------------------------------------------
